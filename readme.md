@@ -27,5 +27,10 @@ Create a new GET request against the protected route
 ```
 Route: GET - /api/protected
 Header: Authorization Bearer {PASTE_TOKEN_HERE}
+
 $ curl -H "Authorization: Bearer INSERT_TOKEN" http://domain/api/protected
 ```
+
+Now you should have access to the protected route.
+
+# Happy coding!
