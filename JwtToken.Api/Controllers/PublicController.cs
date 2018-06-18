@@ -47,7 +47,6 @@ namespace JwtToken.Api.Controllers
 
                 return Ok(tokenString);
             });
-
         }
     }
 }
