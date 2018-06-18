@@ -58,7 +58,10 @@ namespace JwtToken.Api
             }
 
             app.UseHttpsRedirection();
+
+            // Add this to get JWT token validation on controllers
             app.UseAuthentication();
+
             app.UseMvc();
         }
     }

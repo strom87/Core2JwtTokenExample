@@ -2,7 +2,6 @@
 using System.Text;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using JwtToken.Api.Model;
 using Microsoft.AspNetCore.Mvc;
@@ -22,19 +21,11 @@ namespace JwtToken.Api.Controllers
             this.configuration = configuration;
         }
 
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<string>>> Get()
-        {
-            return await Task.Run(() => new List<string> { "Bob", "Kalle" });
-        }
-
         [HttpPost]
         public async Task<ActionResult<string>> Login([FromBody] LoginPostModel model)
         {
             return await Task.Run(() =>
             {
-              
-
                 var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JwtTokenSecret"]));
                 var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
