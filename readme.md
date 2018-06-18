@@ -33,4 +33,4 @@ $ curl -H "Authorization: Bearer INSERT_TOKEN" http://domain/api/protected
 
 Now you should have access to the protected route.
 
-# Happy coding!
+### Happy coding!
